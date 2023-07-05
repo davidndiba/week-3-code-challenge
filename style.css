@@ -1,0 +1,26 @@
+header{
+    background-color: blueviolet;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    font-family: Arial;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+body{
+    background-color: blue;
+    padding: 10px;
+
+}
+
+.tag{
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Times New Roman';
+    font-size: small;
+    font-weight: bolder;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
