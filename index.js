@@ -1,13 +1,13 @@
 
-
 const filmBar = document.getElementById("films")
 
 let filmList = []
 
 fetch("http://localhost:3000/films")
     .then(response => response.json())
-    .then(data => data.forEach(element =>displayFirstFilm(element))
-)
+    .then(data => {
+        displayFirstFilm(data)
+    })
 
 function displayFirstFilm(film) {
     const filmPoster = document.getElementById("poster")
@@ -30,8 +30,8 @@ function displayFirstFilm(film) {
 
 fetch("http://localhost:3000/films")
     .then(res => res.json())
-    .then(json => {
-        filmList = json
+    .then(data => {
+        filmList = data
         renderFilms()
     })
 
