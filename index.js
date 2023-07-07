@@ -1,14 +1,12 @@
-const filmAPI = "http://localhost:3000/films"
 
 const filmBar = document.getElementById("films")
 
 let filmList = []
 
-fetch(`${filmAPI}/1`)
-    .then(res => res.json())
-    .then(json => {
-        displayFirstFilm(json)
-    })
+fetch(" http://localhost:3000/films")
+    .then(response => response.json())
+    .then(data => data.forEach(element =>displayFirstFilm(element))
+    )
 
 function displayFirstFilm(film) {
     const filmPoster = document.getElementById("poster")
@@ -29,7 +27,7 @@ function displayFirstFilm(film) {
 }
 
 
-fetch(filmAPI)
+fetch(" http://localhost:3000/films")
     .then(res => res.json())
     .then(json => {
         filmList = json
